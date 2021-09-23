@@ -1,7 +1,8 @@
 import requests, json
-from yahoo_finance import Share, Currency
 import yfinance as yf
-import pandas as pd
+import quandl
+import setupConfig as sc
+
 
 class ApiConnections:
 
@@ -15,6 +16,7 @@ class ApiConnections:
         self.__YAHOO_SHARE = yf.Ticker("MSFT")
         self.__MULTIPLE_SHARE = ["SPY", "AAPL", "MSFT"]
         self.__SHARE = "MSFT"
+        quandl.ApiConfig.api_key = sc.API_KEY
         print("Constructor en desarrollo")
 
     # Funciones Getters
