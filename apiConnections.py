@@ -27,10 +27,9 @@ class ApiConnections:
     getYahooHistorical() Devuelve los precios de del activo en el rango de fechas que
     se les pase por parametros.
 
-    # tempI: Fecha de inicio (EJ: '2014-04-25')
-    # tempF: Fecha de finalización (EJ: '2014-04-29')
+    # period: 1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max
     """
 
-    def getYahooHistorical(self, tempI, tempF):
-        data = self.__YAHOO_SHARE.get_historical(tempI, tempF)
+    def getYahooHistorical(self, period):
+        data = self.__YAHOO_SHARE.history(period=period)
         return data

@@ -7,4 +7,5 @@ api = ApiConnections()
 # print(api.getYahooCurrency())
 # print(api.getYahooShare())
 
-# api.getYahooHistorical('2014-04-25', '2014-04-29')
+data = api.getYahooHistorical("1d")
+print(data)
